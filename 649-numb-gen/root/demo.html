@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <script src="granim.js"></script>
+</head>
+<canvas id="canvas-basic"></canvas>
+<div id="wrapper">
+    <h1 id="displayUsername"></h1>
+    <header>
+        <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Top Navigation Menu -->
+        <div class="topnav">
+            <a id='dont'>6/49 Number generator</a>
+            <!-- Navigation links (hidden by default) -->
+            <div id="myLinks">
+                <a href="demo.html">Demo</a>
+                <a href="profile.html">Profile</a>
+                <a href="login.html" onclick="signOutUser()">logout</a>
+            </div>
+            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+        <h1>6/49 Number generator</h1>
+        <div id='secondNav'>
+            <nav>
+                <ul>
+                    <a href="login.html" onclick="signOutUser()">
+                        <li>logout</li>
+                    </a>
+                    <a href="demo.html">
+                        <li>Demo</li>
+                    </a>
+                    <a href="profile.html">
+                        <li>Profile</li>
+                    </a>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+    <main>
+        <h2>Please generate your numbers</h2>
+        <button id="gen" onclick="genNumbers()">generate</button>
+        <br>
+        <input type="number" id="num1" min="0" max="49">
+        <input type="number" id="num2" min="0" max="49">
+        <input type="number" id="num3" min="0" max="49">
+        <input type="number" id="num4" min="0" max="49">
+        <input type="number" id="num5" min="0" max="49">
+        <input type="number" id="num6" min="0" max="49">
+        <br>
+        <button id="save" onclick="saveNumbers()">Save Numbers</button>
+
+    </main>
+
+    <footer>
+        <p>The <a href="mochup/index.html" id='mochupLink'>mockup</a></p>
+
+    </footer>
+
+</div>
+
+<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+
+<!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-analytics.js"></script>
+
+<!-- Add Firebase products that you want to use -->
+
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-database.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+<script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyAsoPiAjkkOLWF5ICig8LzynpMux9lLAv0",
+        authDomain: "web-104-application-fbf14.firebaseapp.com",
+        databaseURL: "https://web-104-application-fbf14.firebaseio.com",
+        projectId: "web-104-application-fbf14",
+        storageBucket: "web-104-application-fbf14.appspot.com",
+        messagingSenderId: "183194671395",
+        appId: "1:183194671395:web:b2af87629c9fc2a8b41496"
+    };
+
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    const db = firebase.firestore();
+
+</script>
+
+
+<script src="script.js"></script>
+<script>
+    getUsername();
+</script>
+
+</html>

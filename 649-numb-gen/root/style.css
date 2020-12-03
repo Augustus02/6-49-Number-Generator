@@ -1,0 +1,249 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* END OF ERIC'S RESET */
+
+#canvas-basic {
+    position:absolute; 
+    top:0; 
+    right:0;
+    bottom:0;
+    left:0; 
+    width:100%; 
+    height: 100%;
+    z-index:-1;
+    display: block;
+}
+
+#displayUsername {
+    background-color: grey;
+    color: white;
+    text-align: right;
+    font-size: 1.3rem;
+    font-family: sans-serif;
+}
+
+#secondNav {
+    display: none;
+}
+
+/* Style the navigation menu */
+.topnav {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  .topnav #myLinks {
+    display: none;
+  }
+  
+  /* Style navigation menu links */
+  .topnav a {
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    display: block;
+    text-transform: uppercase;
+    font-family: sans-serif;
+  }
+  
+  /* Style the hamburger menu */
+  .topnav a.icon {
+    background: white;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .topnav a:hover {
+    background-color: grey;
+    color: black;
+    transition: 0.3s;
+  }
+
+    #dont:hover {
+      background-color: white;
+  }
+  
+  /* Style the active link (or home/logo) */
+  .active {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+h1 {
+    font-size: 2rem;
+    padding:1rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    padding:1rem;
+}
+
+body {
+    background-color: 	forestgreen;
+    text-align: center;
+    
+}
+
+#wrapper {
+    max-width: 1000px;
+    margin: auto;
+    background-color: white;
+    /* min-height: calc(100vh - 160px - 52px); */
+}
+
+input {
+    padding:1rem;
+    margin:0.7rem;
+    font-size: 1.5rem;
+
+}
+
+button {
+    padding: 0.5rem 3rem 0.5rem 3rem;
+    margin: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+header {
+    background-color: white;
+    color: black;
+    padding-bottom: 2rem;
+}
+
+header h1 {
+    padding:0.7rem;
+    margin-right: 60%;
+    text-transform: uppercase;
+    font: 1.7rem sans-serif;
+    position: absolute;
+    display: none;
+}
+
+header #secondNav ul {
+    
+    display: -webkit-box; 
+    display: -moz-box;
+    display: -ms-flexbox; 
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 45%;
+}
+
+header #secondNav ul li {
+    text-transform: uppercase;
+    padding: 0.6rem;
+    font: 1rem sans-serif;
+    color: black;
+}
+
+main {
+    padding:2rem;
+}
+
+footer {
+    background-color: white;
+    padding:12.7rem 1rem 2rem 1rem;
+}
+
+footer p {
+    font-size: 2rem;
+}
+
+footer #mochupLink {
+    color: green;
+}
+
+@media only screen and (min-width: 40rem) {
+    .topnav {
+        display: none;
+    }
+
+    #secondNav {
+        display: block;
+    }
+
+    header h1 {
+        padding: 1rem 2rem 1rem 1rem;
+        font-size: 1.5rem;
+        position: absolute;
+        display: block;
+    }
+
+    #secondNav nav {
+        padding-top: 1rem;
+        padding-left: 12rem;
+    }
+
+    #secondNav nav :hover { 
+        color:#4CAF50;
+        transition: 0.3s;
+
+    }
+
+    #secondNav ul li {
+        padding: 1rem;
+    }
+
+    main h1 {
+        padding-top: 3rem;
+    }
+}
