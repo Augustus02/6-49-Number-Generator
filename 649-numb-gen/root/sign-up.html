@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <h1>Sign up</h1>
+        <h2>Username</h2>
+        <input id="username" required>
+        <h2>Email</h2>
+        <input id="email" required>
+        <h2>Password</h2>
+        <input id="password" type="password" required>
+        <h2>Confirm password</h2>
+        <input id="confirmPassword" type="password" required>
+        <br>
+        <button id="submit" onclick="addUser()">Submit</button>
+
+    </div>
+
+</body>
+
+<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+
+<!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-analytics.js"></script>
+
+<!-- Add Firebase products that you want to use -->
+
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-database.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+<script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyAsoPiAjkkOLWF5ICig8LzynpMux9lLAv0",
+        authDomain: "web-104-application-fbf14.firebaseapp.com",
+        databaseURL: "https://web-104-application-fbf14.firebaseio.com",
+        projectId: "web-104-application-fbf14",
+        storageBucket: "web-104-application-fbf14.appspot.com",
+        messagingSenderId: "183194671395",
+        appId: "1:183194671395:web:b2af87629c9fc2a8b41496"
+    };
+
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    const db = firebase.firestore();
+
+</script>
+
+<script src="script.js"></script>
+
+</html>
